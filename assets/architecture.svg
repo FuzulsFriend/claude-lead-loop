@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" width="1280" height="820" role="img" aria-labelledby="t d">
+  <title id="t">Lead Loop architecture</title>
+  <desc id="d">The founder clears a batched decisions list. The lead session reads and writes a shared board, starts a scribe, and directs department heads and builders. Builders work in git worktrees. Every result is verified by verify-piece which writes an evidence file, then reviewed by risk tier, then waits at a human gate.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0E0E10"/>
+    </marker>
+  </defs>
+  <style>
+    .sans{font-family:Assistant,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:800}
+    .mono{font-family:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace}
+    .h{font-size:24px;fill:#0E0E10}
+    .s{font-size:17px;fill:#57534B}
+    .hw{font-size:26px;fill:#EAE4D8}
+    .sw{font-size:17px;fill:#EAE4D8}
+    .box{fill:#EAE4D8;stroke:#0E0E10;stroke-width:4}
+    .ln{fill:none;stroke:#0E0E10;stroke-width:3;marker-end:url(#a)}
+    .dash{fill:none;stroke:#085B8F;stroke-width:3;stroke-dasharray:10 7;marker-end:url(#a)}
+    .lbl{font-size:16px;fill:#085B8F}
+  </style>
+  <rect width="1280" height="820" fill="#EAE4D8"/>
+  <rect width="1280" height="10" fill="#0E0E10"/>
+  <rect y="810" width="1280" height="10" fill="#0E0E10"/>
+
+  <!-- founder + decisions -->
+  <rect class="box" x="40" y="50" width="250" height="90"/>
+  <text class="sans h" x="60" y="88">FOUNDER</text>
+  <text class="mono s" x="60" y="116">direction, merges, prod</text>
+  <rect class="box" x="360" y="50" width="250" height="90"/>
+  <text class="sans h" x="380" y="88">DECISIONS.md</text>
+  <text class="mono s" x="380" y="116">one batched list</text>
+  <path class="ln" d="M360 95 H292"/>
+  <text class="mono lbl" x="296" y="42">cleared 1-2x a day</text>
+
+  <!-- board / lead / scribe -->
+  <rect class="box" x="40" y="215" width="280" height="120"/>
+  <text class="sans h" x="60" y="256">PROGRAM BOARD</text>
+  <text class="mono s" x="60" y="284">git repo, section per role</text>
+  <text class="mono s" x="60" y="308">state lives in files</text>
+
+  <rect x="430" y="205" width="420" height="140" fill="#0B71B2" stroke="#0E0E10" stroke-width="4"/>
+  <text class="sans hw" x="455" y="250">LEAD  =  CTO</text>
+  <text class="mono sw" x="455" y="280">writes no code. plans, verifies,</text>
+  <text class="mono sw" x="455" y="305">decides, keeps production access</text>
+
+  <rect class="box" x="960" y="215" width="280" height="120"/>
+  <text class="sans h" x="980" y="256">SCRIBE</text>
+  <text class="mono s" x="980" y="284">Sonnet, reads transcript</text>
+  <text class="mono s" x="980" y="308">TRACK.md, INDEX.md</text>
+
+  <path class="ln" d="M430 275 H322" marker-start="url(#a)"/>
+  <path class="ln" d="M960 275 H852"/>
+  <text class="mono lbl" x="866" y="262">flags</text>
+  <path class="ln" d="M520 205 V142"/>
+  <text class="mono lbl" x="532" y="178">asks</text>
+
+  <!-- department heads -->
+  <rect class="box" x="430" y="410" width="200" height="80"/>
+  <text class="sans h" x="450" y="446">DEPT HEAD A</text>
+  <text class="mono s" x="450" y="472">owns a track</text>
+  <rect class="box" x="650" y="410" width="200" height="80"/>
+  <text class="sans h" x="670" y="446">DEPT HEAD B</text>
+  <text class="mono s" x="670" y="472">owns a track</text>
+  <path class="ln" d="M570 345 V408"/>
+  <path class="ln" d="M710 345 V408"/>
+
+  <!-- builders -->
+  <g>
+    <rect class="box" x="290" y="560" width="170" height="80"/>
+    <text class="sans h" x="306" y="596" style="font-size:22px">BUILDER</text>
+    <text class="mono s" x="306" y="622" style="font-size:15px">worktree c1</text>
+    <rect class="box" x="480" y="560" width="170" height="80"/>
+    <text class="sans h" x="496" y="596" style="font-size:22px">BUILDER</text>
+    <text class="mono s" x="496" y="622" style="font-size:15px">worktree c2</text>
+    <rect class="box" x="670" y="560" width="170" height="80"/>
+    <text class="sans h" x="686" y="596" style="font-size:22px">BUILDER</text>
+    <text class="mono s" x="686" y="622" style="font-size:15px">worktree c3</text>
+    <rect class="box" x="860" y="560" width="170" height="80"/>
+    <text class="sans h" x="876" y="596" style="font-size:22px">BUILDER</text>
+    <text class="mono s" x="876" y="622" style="font-size:15px">worktree c4</text>
+  </g>
+  <path class="ln" d="M480 490 V558"/>
+  <path class="ln" d="M540 490 L560 558"/>
+  <path class="ln" d="M780 490 L760 558"/>
+  <path class="ln" d="M820 490 L940 558"/>
+
+  <!-- verify -->
+  <rect x="290" y="710" width="740" height="76" fill="#EAE4D8" stroke="#0E0E10" stroke-width="8"/>
+  <text class="sans h" x="312" y="745">VERIFY</text>
+  <text class="mono s" x="312" y="771" style="font-size:18px">verify-piece.cjs  ->  evidence/piece-sha.json  (ok:true for THIS head)</text>
+  <path class="ln" d="M375 640 V708"/>
+  <path class="ln" d="M565 640 V708"/>
+  <path class="ln" d="M755 640 V708"/>
+  <path class="ln" d="M945 640 V708"/>
+
+  <!-- review + gate -->
+  <rect x="1060" y="440" width="190" height="150" fill="#0B71B2" stroke="#0E0E10" stroke-width="4"/>
+  <text class="sans hw" x="1078" y="480">REVIEW</text>
+  <text class="mono sw" x="1078" y="508" style="font-size:15px">Tier A: 3 lenses</text>
+  <text class="mono sw" x="1078" y="530" style="font-size:15px">+ one attacker</text>
+  <text class="mono sw" x="1078" y="552" style="font-size:15px">Tier B: code review</text>
+  <path class="ln" d="M1030 748 H1155 V592"/>
+  <path class="ln" d="M1250 515 H1262 V95 H612"/>
+  <text class="mono lbl" x="1000" y="82">READY: waits for a human gate</text>
+  <path class="dash" d="M1060 575 H1034"/>
+  <text class="mono lbl" x="1064" y="612">fix list</text>
+</svg>

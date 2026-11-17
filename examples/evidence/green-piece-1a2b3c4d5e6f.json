@@ -1,0 +1,20 @@
+{
+  "piece": "green-piece",
+  "head": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+  "ok": true,
+  "at": "2026-01-05T10:00:00.000Z",
+  "results": [
+    {
+      "name": "price",
+      "cmd": [
+        "node",
+        "test-price.cjs"
+      ],
+      "exit": 0,
+      "lastLine": "PASS price: 1/1 checks",
+      "expect": "PASS price: 1/1",
+      "pass": true,
+      "ms": 108
+    }
+  ]
+}

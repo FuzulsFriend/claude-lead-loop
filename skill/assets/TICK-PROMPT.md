@@ -1,0 +1,11 @@
+# Tick prompt (paste into a recurring CronCreate at off-minutes, every 15-20 minutes; fill in the paths)
+
+Lead-loop tick for <program> (invoke the lead-loop skill if it is not loaded; you ARE the loop, never wait for the human).
+0) FIRST read the standing founder decisions block (board section 0) and the newest entry of <program folder>/scribe/TRACK.md. Act on every flag, or answer it in the founder-decisions log with a reason. A flag about a contradicted founder decision goes to the human in this turn's message. Work only pieces on the current launch cut; review findings go post-launch by default.
+1) Read <usage file> (a worker PC with none: the weekly % in board section 0). Near 90% of a 5-hour window, or at the weekly stop line the human set: finish the step in hand, record it, arm the resume (usage-limits skill), stop.
+1b) Search the program's outside threads (for example one mail search for replies from the vendor's support address since the last tick). Record each answer where the program keeps vendor facts.
+2) Pull <board repo>. Read your board section, section 0 and section 5 (single-session program: <program folder>/LEDGER.md) and the builders' progress logs. Check each detached run's pid and --out file, and each lock or slot row for a dead owner. A department that is idle with work queued gets one nudge.
+3) Do every step that is yours: verify finished builds with <skill>/scripts/verify-piece.cjs (evidence for HEAD or it is not done), review by tier (Tier A: one 3-lens correctness panel, proven findings only, one attacker on fixes, max 2 panels; Tier B: /code-review), send triaged findings back to the builder, re-verify, push once and open the PR, run CI, start the next piece or design when a builder slot is free, answer builder questions.
+3b) SCRIBE: if the transcript grew past <program folder>/scribe/cursor.json's offset, or the board repo or main moved, start the scribe as a background Sonnet agent with <skill>/assets/SCRIBE-BRIEF.md filled in. Never run more than one scribe at a time.
+4) Merges and production changes: add to <program folder>/DECISIONS.md with your would-merge/would-apply call; do not wait on them.
+5) Update your board section (replace Now; add one Log line stamped from `date`) and push at once (single-session program: LEDGER.md). If nothing changed, end the turn silently.
