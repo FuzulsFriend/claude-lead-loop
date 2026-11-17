@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Lead Loop: one Claude Code session runs a multi-day engineering program" width="100%">
+  <img src="assets/banner.png" alt="Lead Loop: one Claude Code session runs a multi-day engineering program" width="100%">
 </p>
 
 > **A Claude Code skill that turns one session into the CTO of a multi-day, many-PR engineering program. It writes no code. It hands pieces to builders, checks every result with a machine, and only bothers you with a short list.**
@@ -33,7 +33,7 @@ Five ideas. Everything else in the skill is detail.
 ## Architecture
 
 <p align="center">
-  <img src="assets/architecture.svg" alt="Architecture: founder, decisions list, board, lead, scribe, department heads, builders in worktrees, verify, review" width="100%">
+  <img src="assets/architecture.png" alt="Architecture: founder, decisions list, board, lead, scribe, department heads, builders in worktrees, verify, review" width="100%">
 </p>
 
 The life of one piece:
